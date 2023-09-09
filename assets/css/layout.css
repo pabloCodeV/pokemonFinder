@@ -1,0 +1,180 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+body{
+  background-color: #a6a6a6;
+  margin: 0;
+  padding: 0;
+}
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+}
+.pokedesk{
+  background-image: url(../image/pokedesk.png);
+  background-repeat: no-repeat;
+  height: 700px;
+  display: flex;
+  margin: 10px 20px;
+  border-radius: 50px;
+  border: 4px solid #000;
+  flex-direction: column;
+}
+.modal-content{
+  background: none !important ;
+  background-color: none !important ;
+  background-image: url(../image/pocke_stats.png) !important;
+  border: none;
+  height: 540px;
+}
+.modal-header{
+  border-bottom: none !important;
+}
+.modal-body{
+  display: flex;
+}
+.only-pokedesk{
+  padding: 0px 66px;
+}
+.poke-stats{
+  width: 270px;
+  align-self: center;
+  background: white;
+  border-radius: 30px;
+  bottom: 33px;
+  position: relative;
+  left: 90px;
+  border: 1px solid #000;
+}
+.only-pokedesk img{
+  width: 158px;
+  margin: 34px 20px;
+  
+}
+.pokedesk>img{
+  width: 430px;
+  padding: 200px 112px;
+}
+.finder{
+  padding: 40px 10px;
+  background-color: #fff;
+  box-shadow: 10px 9px 27px 3px;
+  margin-bottom: 50px;
+}
+.form{
+  display: flex;
+}
+.tm-lg{
+  width: 25%;
+}
+.tm-sm{
+  width: 10%;
+  margin-left: 25px;
+}
+.title{
+  font-size: 65px;
+  font-weight: 600;
+  font-family: 'Pokemon Solid', sans-serif;
+  color: #f1db17;
+  -webkit-text-stroke: 3px rgb(5 125 219);
+  letter-spacing: 4px;
+  text-shadow:
+      -1px -1px 0 rgb(3, 172, 250),
+      1px -1px 0 rgb(3, 172, 250),
+      -1px 1px 0 rgb(3, 172, 250),
+      1px 1px 0 rgb(3, 172, 250),
+                                                
+}
+.sub-title{
+  margin-left: 20px;
+  font-size: 32px;
+  margin-top: 40px;
+  font-weight: 600;
+  font-family: 'MontserratS', sans-serif;
+  color: #f1db17;
+  -webkit-text-stroke: 3px rgb(5 125 219);
+  letter-spacing: 4px;
+  text-shadow:
+      -1px -1px 0 rgb(3, 172, 250),
+      1px -1px 0 rgb(3, 172, 250),
+      -1px 1px 0 rgb(3, 172, 250),
+      1px 1px 0 rgb(3, 172, 250),
+                                         
+}
+
+
+.btn-view{
+  width: 165px !important;
+  background: none !important;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+  font-weight: 600;
+  position: relative;
+  align-self: center;
+  right: 44px;
+  padding: 24px 0px;
+  bottom: 30px;
+  text-transform: capitalize;
+  box-shadow: 10px 14px 10px -4px;
+}
+.btn-primary:hover {
+  color: black;
+  box-shadow: -1px 14px 12px -5px;
+  background-color: none !important;
+  border: none !important;
+  background: none !important;
+}
+.poke-stats p{
+  margin: 0;
+  padding: 10px 0px;
+  /* padding-left: 60px; */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.poke-stats p:nth-child(1){
+  border-radius: 10px 10px 0px 0px;
+}
+.poke-stats p:nth-child(6){
+  border-radius: 0 0 10px 10px;
+}
+.es-lg{
+  width: 118px;
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+.fa-arrow-right:before{
+  margin-right: 10px;
+}
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+   box-shadow: none !important;
+   color: #000;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus{
+  border: none !important;
+  box-shadow: none !important;
+  color: #000;
+}
+.modal-header{
+  margin: 0 ;
+}
+.btn-close{
+  margin: 12px !important;
+  bottom: 12px;
+  font-size: 39px;
+  left: 16px;
+  position: relative;
+}
+
+@media (min-width: 576px){
+  .modal-dialog {
+      max-width: 747px;
+      margin: 1.75rem auto;
+  }
+
+}
