@@ -14,4 +14,4 @@
  
 
 
-![parcial](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/6681ccdb-a05c-4da1-9039-8b68357fd758){width=100px}
+![parcial](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/cb7f8a36-5c4c-4d87-aa93-1877d4f12602)
