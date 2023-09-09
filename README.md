@@ -8,14 +8,14 @@
   Tambien se necesitara conexion a internet, ya que la API que trabaja con el buscador es de uso publico y se encuentra en internet (https://pokeapi.co/docs/v2)
 
 # Ejemplos de uso
- Busqueda por nombre parcial  
+ Busqueda por nombre parcial <br>
 ![parcial](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/cb7f8a36-5c4c-4d87-aa93-1877d4f12602)
 
-Busqueda por nombre total  
+Busqueda por nombre total  <br>
 ![total](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/3a19c86d-e282-4887-9f92-ca25b12378ee)
 
-Busqueda por Id  
+Busqueda por Id  <br>
 ![id](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/45f2b2e2-aa0d-40ee-ac19-6b739a19d509)
 
-Busqueda por id por sobre la cantidad de pokemons existentes  
+Busqueda por id por sobre la cantidad de pokemons existentes  <br>
 ![cap](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/de504169-68bb-4541-95ec-d11a464d2779)
