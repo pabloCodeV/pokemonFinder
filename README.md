@@ -9,16 +9,19 @@
 
 ## Ejemplos de uso
  Búsqueda por nombre parcial <br>
-![parcial](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/cb7f8a36-5c4c-4d87-aa93-1877d4f12602)
+![parcial](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/743d64de-9db9-44a2-9bd3-32d9111d111d)
 
 Búsqueda por nombre total  <br>
-![total](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/3a19c86d-e282-4887-9f92-ca25b12378ee)
+![total](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/e34db54f-398c-4d35-bf1e-8e511bee60b7)
+
 
 Búsqueda por Id  <br>
-![id](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/45f2b2e2-aa0d-40ee-ac19-6b739a19d509)
+![id](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/601ee771-2a3d-481c-baa5-088da277dc2f)
+
 
 Búsqueda por id por sobre la cantidad de pokemons existentes  <br>
-![cap](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/de504169-68bb-4541-95ec-d11a464d2779)
+![cap](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/28931461-d05e-44ba-9916-01a2e44ad351)
+
 
 ## Estado del proyecto
  Testing
