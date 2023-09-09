@@ -20,11 +20,11 @@ Busqueda por Id  <br>
 Busqueda por id por sobre la cantidad de pokemons existentes  <br>
 ![cap](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/de504169-68bb-4541-95ec-d11a464d2779)
 
-#Estado del proyecto
+# Estado del proyecto
  Testing
 
-#Documentacion de dependencias
-PHP: https://www.php.net/
-VLUCA/DOTENV: https://github.com/vlucas/phpdotenv
-PHPSTAN: https://github.com/vlucas/phpdotenv
-POKEAPI: https://pokeapi.co/docs/v2
+# Documentacion de dependencias
+PHP: https://www.php.net/ <br>
+VLUCA/DOTENV: https://github.com/vlucas/phpdotenv <br>
+PHPSTAN: https://github.com/vlucas/phpdotenv <br>
+POKEAPI: https://pokeapi.co/docs/v2 
