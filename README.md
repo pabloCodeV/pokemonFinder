@@ -1,4 +1,4 @@
-#:rocket: PokemonFinder
+# :rocket: PokemonFinder :rocket:
  Vas a poder encontrar todos los pokémons que quieras, buscandolos tanto por nombre parcial o completo, o por numero de id.
  En nuestro Pokedesk podras encontrar 1010 variedades de pokemons de las distintas temporadas, siempre y cuando el equipo rocket no se los lleve!
 
