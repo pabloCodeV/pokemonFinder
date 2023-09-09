@@ -12,5 +12,6 @@
 
 
  
- ![parcial](https://github.com/pabloCodeV/pokemonFinder/assets/ejemplos/86093280/parcial.png)
 
+
+![parcial](https://github.com/pabloCodeV/pokemonFinder/assets/86093280/6681ccdb-a05c-4da1-9039-8b68357fd758)
