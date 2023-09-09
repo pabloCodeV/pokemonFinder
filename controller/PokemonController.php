@@ -78,8 +78,8 @@ class PokemonFinder{
     if(!empty($val)){
       if(is_numeric($val)){
         if($val > 1010){
-          echo '<div style="border-radius:15px"> 
-                  <img src="assets/image/error.png">
+          echo '<div> 
+                  <img style="border-radius:15px;" src="assets/image/error.png">
                 </div>';
                   die();
         }
