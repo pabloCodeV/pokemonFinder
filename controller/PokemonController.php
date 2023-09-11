@@ -82,7 +82,6 @@ class PokemonFinder{
         if(is_numeric($val)){
           $this->notFound($val);
           $this->data = $this->onlyPokemon->apiRunOnly($val);
-
           $this->view($this->data->name);
             
         }else{ 
