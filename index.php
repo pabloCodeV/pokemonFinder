@@ -24,8 +24,8 @@
     <section id="container">
       <?php
         require 'controller/PokemonController.php';
-        $instancia = new PokemonFinder();
-        $instancia->apiExecute($_POST['pokemon']);
+          $instancia = new PokemonFinder();
+          $instancia->apiExecute(!empty($_POST['pokemon']) ? $_POST['pokemon'] = $_POST['pokemon'] : $_POST['pokemon'] ="Primera Busqueda");
       ?>
     </section>
 

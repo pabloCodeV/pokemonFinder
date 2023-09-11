@@ -112,31 +112,34 @@ class PokemonFinder{
   
       //***** */ BOOTSTRAP MODAL VIEW
       public function view($pokeNames){
-        echo '<div class="modal fade" id="'.str_replace("-","",$pokeNames).'" tabindex="-1" role="dialog" aria-labelledby="'.str_replace("-","",$pokeNames).'" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="only-pokedesk">
-                      <img src="'.$this->data->sprites->other->{'official-artwork'}->front_default.'">
-                    </div>
-                    <div class="poke-stats">';
-                    $colores = ['#26e11d','#ff4343','#5586ee','#ff74e6','#0d4bcf','#cfbe11'];
-                    $count = 0;
+        $colores = ['#26e11d','#ff4343','#5586ee','#ff74e6','#0d4bcf','#cfbe11'];
+        $count = 0;
 
-                    foreach($this->data->stats as $value){;
+        $html =  '<div class="modal fade" id="'.str_replace("-","",$pokeNames).'" tabindex="-1" role="dialog" aria-labelledby="'.str_replace("-","",$pokeNames).'" aria-hidden="true">';
+        $html .=  '<div class="modal-dialog" role="document">';
+        $html .=    '<div class="modal-content">';
+        $html .=      '<div class="modal-header">';
+        $html .=        '<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>';
+        $html .=      '</div>';
+        $html .=      '<div class="modal-body">';
+        $html .=        '<div class="only-pokedesk">';
+        $html .=          '<img src="'.$this->data->sprites->other->{'official-artwork'}->front_default.'">';
+        $html .=        '</div>';
+        $html .=        '<div class="poke-stats">';
 
-                      echo '<p style="background:'.$colores[$count].';text-transform:capitalize;"><span class="es-lg">'.$value->base_stat.'</span>  <i class="fas fa-arrow-right"></i><span class="es-lg"> '.$value->stat->name.'</span></p>';
-                      $count++;
-                    };
+        foreach($this->data->stats as $value){;
 
-        echo       '</div>
-                  </div>
-                </div>
-              </div>
-            </div>';
+          $html .= '<p style="background:'.$colores[$count].';text-transform:capitalize;"><span class="es-lg">'.$value->base_stat.'</span>  <i class="fas fa-arrow-right"></i><span class="es-lg"> '.$value->stat->name.'</span></p>';
+          $count++;
+        };
+
+        $html .=      '</div>';
+        $html .=     '</div>';
+        $html .=    '</div>';
+        $html .=   '</div>';
+        $html .=  '</div>';
+
+        return $html;
       }
 
 
