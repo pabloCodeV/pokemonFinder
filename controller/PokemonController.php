@@ -79,29 +79,27 @@ class PokemonFinder{
     public function apiExecute($val){
       if(!empty($val)){
 
-          if(is_numeric($val)){
-            $this->notFound($val);
-            $this->data = $this->onlyPokemon->apiRunOnly($val);
-            $this->viewCard( $this->data->name);
-            $this->view($this->data->name);
-              
-          }else{ 
+        if(is_numeric($val)){
+          $this->notFound($val);
+          $this->data = $this->onlyPokemon->apiRunOnly($val);
 
-              $pokeDiscover = $this->allPokemon->apiRun();
-              $count = 0;
+          $this->view($this->data->name);
+            
+        }else{ 
 
-              foreach ($pokeDiscover as $pokeNames) {
-                if (strpos($pokeNames, $val) !== false && ($val !="" || $val !=NULL)) {
-                  $this->data = $this->onlyPokemon->apiRunOnly($pokeNames);
-                  $this->viewCard($pokeNames);
-                  $this->view($pokeNames); 
-                  $count++;    
-                }
-              }
+          $pokeDiscover = $this->allPokemon->apiRun();
+          $count = 0;
 
-              $this->notFound($count);
-  
+          foreach ($pokeDiscover as $pokeNames) {
+            if (strpos($pokeNames, $val) !== false && ($val !="" || $val !=NULL)) {
+              $this->data = $this->onlyPokemon->apiRunOnly($pokeNames);
+              $this->view($pokeNames); 
+              $count++;    
+            }
           }
+          $this->notFound($count);
+
+        }
 
       }else{
         $this->notFound($val);
@@ -112,41 +110,55 @@ class PokemonFinder{
   
       //***** */ BOOTSTRAP MODAL VIEW
       public function view($pokeNames){
-        echo '<div class="modal fade" id="'.str_replace("-","",$pokeNames).'" tabindex="-1" role="dialog" aria-labelledby="'.str_replace("-","",$pokeNames).'" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="only-pokedesk">
-                      <img src="'.$this->data->sprites->other->{'official-artwork'}->front_default.'">
-                    </div>
-                    <div class="poke-stats">';
-                    $colores = ['#26e11d','#ff4343','#5586ee','#ff74e6','#0d4bcf','#cfbe11'];
-                    $count = 0;
+        $colores = ['#26e11d','#ff4343','#5586ee','#ff74e6','#0d4bcf','#cfbe11'];
+        $count = 0;
 
-                    foreach($this->data->stats as $value){;
+        $this->viewCard($pokeNames);
 
-                      echo '<p style="background:'.$colores[$count].';text-transform:capitalize;"><span class="es-lg">'.$value->base_stat.'</span>  <i class="fas fa-arrow-right"></i><span class="es-lg"> '.$value->stat->name.'</span></p>';
-                      $count++;
-                    };
+        $html =   '<div class="modal fade" id="'.str_replace("-","",$pokeNames).'" tabindex="-1" role="dialog" aria-labelledby="'.str_replace("-","",$pokeNames).'" aria-hidden="true">';
+        $html .=  '<div class="modal-dialog" role="document">';
+        $html .=  '<div class="modal-content">';
+        $html .=  '<div class="modal-header">';
 
-        echo       '</div>
-                  </div>
-                </div>
-              </div>
-            </div>';
+        $html .=  '<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>';
+
+        $html .=  '</div>';
+
+        $html .=  '<div class="modal-body">';
+        $html .=  '<div class="only-pokedesk">';
+
+        $html .=  '<img src="'.$this->data->sprites->other->{'official-artwork'}->front_default.'">';
+
+        $html .=  '</div>';
+
+        $html .=  '<div class="poke-stats">';
+
+        foreach($this->data->stats as $value){;
+
+          $html .= '<p style="background:'.$colores[$count].';text-transform:capitalize;"><span class="es-lg">'.$value->stat->name.'</span>  <i class="fas fa-arrow-right"></i><span class="es-lg">'.$value->base_stat.'</span></p>';
+          $count++;
+        };
+
+        $html .=  '</div>';
+        $html .=  '</div>';
+        $html .=  '</div>';
+        $html .=  '</div>';
+        $html .=  '</div>';
+       
+        echo $html;
       }
 
 
       //**** POKEMON CARD
       public function viewCard($pokeNames){
         if(!empty($pokeNames)){
-          echo  '<div class="pokedesk">
-                  <img src="'.$this->data->sprites->other->{'official-artwork'}->front_default.'">
-                  <button type="button" class="btn-view btn btn-primary" data-toggle="modal" data-target="#'.str_replace("-","",$pokeNames).'" >'.$pokeNames.'</button>
-                </div>';
+          $html =  '<div class="pokedesk">';
+
+          $html .= '<img src="'.$this->data->sprites->other->{'official-artwork'}->front_default.'">';
+          $html .= '<button type="button" class="btn-view btn btn-primary" data-toggle="modal" data-target="#'.str_replace("-","",$pokeNames).'" >'.$pokeNames.'</button>';
+
+          $html .= '</div>';
+          echo $html;
         }
       }
 
@@ -155,18 +167,20 @@ class PokemonFinder{
       public function notFound($exist){
         switch($exist){
           case false || "0" || "":
-              echo '<div style="border-radius:15px;text-align-last: center;"> 
-                      <img style="width:45%" src="assets/image/not-found.png">
-                      <h2>Pokémon No Encontrado</h2>
-                    </div>';
-                  die();
-              break;
+            $html =  '<div style="border-radius:15px;text-align-last: center">';
+            $html .=   '<img style="width:45%" src="assets/image/not-found.png">';
+            $html .=   '<h2>Pokémon No Encontrado</h2>';
+            $html .= '</div>';
+            return $html;
+            break;
+
           case $exist > 1010:
-              echo '<div> 
-                      <img style="border-radius:15px;" src="assets/image/error.png">
-                    </div>';
-                      die();
-              break;
+            $html = '<div>';
+            $html .= '<img style="border-radius:15px;" src="assets/image/error.png">';
+            $html .= '</div>';
+            return $html;
+            break;
+            
         }
       }
 
